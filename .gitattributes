@@ -1,0 +1,40 @@
+# 统一换行符：仓库内一律 LF，检出到 Windows 时按需转换
+* text=auto
+
+# 源码强制 LF
+*.java   text eol=lf
+*.xml    text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.properties text eol=lf
+*.js     text eol=lf
+*.ts     text eol=lf
+*.vue    text eol=lf
+*.json   text eol=lf
+*.css    text eol=lf
+*.scss   text eol=lf
+*.html   text eol=lf
+*.md     text eol=lf
+
+# Windows 脚本保留 CRLF
+*.bat    text eol=crlf
+*.cmd    text eol=crlf
+
+# 二进制文件不做转换
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.pdf    binary
+*.zip    binary
+*.jar    binary
+*.woff   binary
+*.woff2  binary
+
+# git diff 时把 lock 文件视为生成物（不计入语言统计）
+pnpm-lock.yaml  linguist-generated=true
+package-lock.json linguist-generated=true
+
+# 合并策略
+pom.xml merge=union
