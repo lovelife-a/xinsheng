@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <!-- 全组统一：3.5.16（3.5 线最终版本）。3.5.x 官方支持 JDK 17~25，与我们的 JDK 23 兼容。改版本请先同步基线表 -->
+        <!-- 全组统一：3.5.16（3.5 线最终版本）。3.5.x 官方支持 JDK 17~25，与我们的 JDK 25 LTS 兼容。改版本请先同步基线表 -->
         <version>3.5.16</version>
         <relativePath/>
     </parent>
@@ -19,8 +19,8 @@
     <description>新升项目 - 敏捷项目管理系统 后端</description>
 
     <properties>
-        <!-- 全组统一：JDK 23。如需降级请同步修改此处 + 更新基线表 -->
-        <java.version>23</java.version>
+        <!-- 全组统一：JDK 25（LTS，官方支持至 2030-09）。如需降级请同步修改此处 + 更新基线表 -->
+        <java.version>25</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
