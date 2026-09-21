@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 
 /**
  * 统一请求封装。
@@ -8,8 +8,8 @@ import axios from 'axios'
  */
 const request = axios.create({
   baseURL: '/api',
-  timeout: 10000
-})
+  timeout: 10000,
+});
 
 request.interceptors.response.use(
   (response) => response.data,
@@ -18,10 +18,10 @@ request.interceptors.response.use(
       error.response?.data?.message ||
       error.response?.statusText ||
       error.message ||
-      '请求失败'
-    console.error('[request]', error.config?.url, msg)
-    return Promise.reject(new Error(msg))
+      '请求失败';
+    console.error('[request]', error.config?.url, msg);
+    return Promise.reject(new Error(msg));
   }
-)
+);
 
-export default request
+export default request;
